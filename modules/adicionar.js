@@ -1,10 +1,6 @@
 var prompt = require('prompt-sync')();
 //var armazenar = require('armazenar.js');
 
-
-
-
-
 adicionar = () => {
     console.log('Informe os dados do novo contato');
     var nome = prompt('Nome: ');
