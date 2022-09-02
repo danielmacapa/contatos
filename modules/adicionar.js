@@ -1,5 +1,4 @@
 var prompt = require('prompt-sync')();
-//var armazenar = require('armazenar.js');
 
 adicionar = () => {
     console.log('Informe os dados do novo contato');
@@ -8,11 +7,27 @@ adicionar = () => {
     var email = prompt('Email: ');
     var uf = prompt('UF: ');
     var cidade = prompt('Cidade: ');
-    var endereço = prompt('Endereço: ');
+    var endereco = prompt('Endereço: ');
 
-    var meucontato = new Contato();
+    if (nome === null && telefone === null && email === null && uf === null && cidade === null && endereco === null) {
+        nome = "";
+        telefone = "";
+        email = "";
+        uf = "";
+        cidade = "";
+        endereco = "";
+      }
+
+    contatos[contatos.length] = new add(nome, telefone, email, uf, cidade, endereco);
+    
+    add = (nome, sobrenome, celular, email) => {
+    this.nome = nome;
+    this.telefone = sobrenome;
+    this.email = celular;
+    this.uf = email;
+    this.cidade = cidade;
+    this.endereco = endereco;
+    }
 }
-
-
 
 module.exports = adicionar;

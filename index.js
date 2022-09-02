@@ -2,7 +2,20 @@ const adicionar = require('./modules/adicionar.js');
 const listar = require('./modules/listar.js');
 const pesquisar = require('./modules/pesquisar.js');
 const remover = require('./modules/remover.js');
-//const armazenar = require('./modules/armazenar.js');
+
+// iniciando a agenda
+
+var ana = {
+    nome: "Ana",
+    telefone: "Nascimento",
+    email: "anacoimba@bol.com",
+    uf: "PA",
+    cidade: "belém",
+    endereco: "rua 15"
+};
+
+var contatos = [ana];
+
 
 
 var prompt = require('prompt-sync')();
