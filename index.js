@@ -2,7 +2,7 @@ const adicionar = require('./modules/adicionar.js');
 const listar = require('./modules/listar.js');
 const pesquisar = require('./modules/pesquisar.js');
 const remover = require('./modules/remover.js');
-const armazenar = require('./modules/armazenar.js');
+//const armazenar = require('./modules/armazenar.js');
 
 
 var prompt = require('prompt-sync')();
