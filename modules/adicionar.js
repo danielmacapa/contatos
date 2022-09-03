@@ -1,4 +1,5 @@
 var prompt = require('prompt-sync')();
+var contatos = [];
 
 adicionar = () => {
     console.log('Informe os dados do novo contato');

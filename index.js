@@ -25,13 +25,13 @@ if (op == 1){
     adicionar();
 } else { 
     if (op == 2){
-    listar();
+    remover();
 } else {
     if (op == 3){
-    pesquisar();
+    listar();
 } else {
     if (op == 4){
-    remover();
+    pesquisar();
 } else {
     if (op == 0){
     sair();
