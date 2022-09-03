@@ -1,13 +1,21 @@
-var prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")({ sigint: true });
 
-remover = () => {
-    console.log('Informe o nome');
-    var nome = prompt('Nome: ');
-    for (var i = 0; i < contatos.length; i++) {
-        if (remover === contatos[i].nome) {
-          contatos.splice(contatos[i], 1);
-        }
+const remover = (contatos) => {
+  console.log('Informe o nome');
+  const nome = prompt('Nome: ');
+  let lidos = true
+  for (var i = 0; i < contatos.length; i++) {
+      if (nome === contatos[i].nome) {
+          contatos.splice(i, 1);
+          lidos = false
       }
-    }
+  }
+
+  if (lidos) {
+      console.log("\n\nNão encontrado!\n\n")
+  }
+
+  listar(contatos)
+}
 
 module.exports = remover;

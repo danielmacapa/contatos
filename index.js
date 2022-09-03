@@ -1,43 +1,45 @@
+const prompt = 3
 const adicionar = require('./modules/adicionar.js');
+const remover = require('./modules/remover.js');
 const listar = require('./modules/listar.js');
 const pesquisar = require('./modules/pesquisar.js');
-const remover = require('./modules/remover.js');
+let contatos = require("./modules/array")
 
-// iniciando a agenda
+const main = () => {
+    let condicao = true
 
-var ana = {
-    nome: "Ana",
-    telefone: "Nascimento",
-    email: "anacoimba@bol.com",
-    uf: "PA",
-    cidade: "belém",
-    endereco: "rua 15"
-};
+    while (condicao) {
+        console.log("1) Adicionar")
+        console.log("2) Remover")
+        console.log("3) Listar")
+        console.log("4) Pesquisar")
+        console.log("0) Sair")
+        var opcao = parseInt(prompt("Digite uma opção: "));
 
-var contatos = [ana];
+        switch (opcao) {
+            case 1:
+                adicionar(contatos)
+                break
+            case 2:
+                remover(contatos)
+                break
+            case 3:
+                listar(contatos)
+                break
+            case 4:
+                pesquisar(contatos)
+                break
+            case 0:
+                condicao = false
+                break
+            default:
+                console.log("\n\nTente de novo, opção incorreta!\n\n")
+                break
+        }
+    }
+}
 
-
-
-var prompt = require('prompt-sync')();
-var op = prompt('Selecione uma opção de contato: 1- Adicionar;  2- Remover; 3- Listar; 4- Pesquisar; 0- Sair da agenda ');
-
-if (op == 1){
-    adicionar();
-} else { 
-    if (op == 2){
-    remover();
-} else {
-    if (op == 3){
-    listar();
-} else {
-    if (op == 4){
-    pesquisar();
-} else {
-    if (op == 0){
-    sair();
-}}}}}
-
-
+main(contatos)
 
 
 
