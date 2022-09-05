@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync');
+const prompt = require('prompt-sync')();
 const adicionar = require('./modules/adicionar.js');
 const remover = require('./modules/remover.js');
 const listar = require('./modules/listar.js');
@@ -9,6 +9,7 @@ const main = () => {
     let condicao = true
 
     while (condicao) {
+        //var opcao = parseInt(prompt('Digite uma opção:\n1) Adicionar\n2) Remover\n3) Listar\n4) Pesquisar\n0) Sair\n'));
         console.log('1) Adicionar\n2) Remover\n3) Listar\n4) Pesquisar\n0) Sair');
         var opcao = parseInt(prompt('Digite uma opção: '));
 
